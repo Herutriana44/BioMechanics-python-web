@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+img {
+    border: 5px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+#rula_score, #reba_score {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+button {
+    background-color: #5cb85c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
