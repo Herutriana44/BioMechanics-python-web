@@ -23,7 +23,7 @@ def gen_frames():
         pose1=[]
         
         if results.pose_landmarks:
-            mp_drawing.draw_landmarks(frame, results.pose_landmarks, mp_pose.POSE_CONNECTIONS)
+            # mp_drawing.draw_landmarks(frame, results.pose_landmarks, mp_pose.POSE_CONNECTIONS)
             for id, lm in enumerate(results.pose_landmarks.landmark):
                 x_y_z=[]
                 h, w,c = image_rgb.shape
@@ -51,12 +51,12 @@ def gen_frames():
                     message1 = ("Rapid Upper Limb Assessment Score : "+rula+" Posture not proper in upper body. ")
                     message2 = ("Posture not proper in upper body")
                     msg = message1# + message2
-                    cv2.putText(frame, msg, (10, 90), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2)
+                    cv2.putText(frame, msg, (10, 90), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
                     mp_drawing.draw_landmarks(
                         frame,
                         results.pose_landmarks,
                         mp_pose.POSE_CONNECTIONS,
-                        landmark_drawing_spec=mp_drawing.DrawingSpec(color=(255,0, 0), thickness=2, circle_radius=4))
+                        landmark_drawing_spec=mp_drawing.DrawingSpec(color=(0,0, 255), thickness=2, circle_radius=4))
                 else:
                     message1 = ("Rapid Upper Limb Assessment Score : "+rula)
                     cv2.putText(frame, message1, (10, 90), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
@@ -65,12 +65,12 @@ def gen_frames():
                     message1 = ("Rapid Entire Body Score : "+reba+" Posture not proper in your body. ")
                     message2 = ("Posture not proper in your body")
                     msg = message1# + message2
-                    cv2.putText(frame, msg, (10, 120), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2)
+                    cv2.putText(frame, msg, (10, 120), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
                     mp_drawing.draw_landmarks(
                         frame,
                         results.pose_landmarks,
                         mp_pose.POSE_CONNECTIONS,
-                        landmark_drawing_spec=mp_drawing.DrawingSpec(color=(255,0, 0), thickness=2, circle_radius=4))
+                        landmark_drawing_spec=mp_drawing.DrawingSpec(color=(0,0, 255), thickness=2, circle_radius=4))
                 else:
                     message1 = ("Rapid Entire Body Score : "+reba)
                     cv2.putText(frame, message1, (10, 120), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
